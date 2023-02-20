@@ -1,0 +1,10 @@
+#1. build docker image
+docker build -t spark-cluster:3.3.0 .
+
+#2. run docker compose
+docker-compose up
+
+#3. view spark ui
+https://localhost:8080
+
+#4. Have fun

@@ -1,0 +1,24 @@
+#1.0 install VSCODE
+
+#1.1 In VSCODE, install Docker Extension by Microsoft 
+
+
+#2.0 In command pallet in vscode with docker containers running enter
+"Dev Containers: Attach to Running Container"
+Select the "Master" node from list.  DOn't see it?  Make sure docker containers are running
+
+#2.1 In command pallet vscode enter
+Dev Containers: Open Container Configuration File
+in file enter "workspaceFolder": "/opt/spark-apps" then save file
+
+#3.0 Close, Reopen VSCODE
+
+#3.1 In command pallet in vscode enter
+Dev Containers: Attach to Running Container
+Select "Master" node created
+
+#4.0  Open test.py
+Update the " .master("spark://cedc9cd97516:7077") \" to your spark information. You can find spark info on docker container log
+Execute the python file.  Should return dataframe.
+Open local browser and enter "localhost:8080"  you should see SparkUI and that it has executed.
+
